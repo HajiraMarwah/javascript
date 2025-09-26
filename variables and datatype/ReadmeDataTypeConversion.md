@@ -52,10 +52,15 @@ let y = +x;
 console.log(y); // 30
 
 ```
-## Key Points
-   -Implicit conversion happens automatically during operations like +, -, *, etc.
-   -Explicit conversion is safer and more predictable.
-   -0, "", null, undefined, NaN → converted to false in boolean context.
-    -Any non-empty string or non-zero number → converted to true.
+
+## 🔹 Key Points
+
+- Implicit conversion happens automatically during operations like `+`, `-`, `*`, etc.
+- Explicit conversion is safer and more predictable.
+- `0`, `""`, `null`, `undefined`, `NaN` → converted to `false` in boolean context.
+- Any non-empty string or non-zero number → converted to `true`.
+- Use explicit conversion when you want clear and predictable behavior.
+- Type coercion can cause unexpected results, always check your operations.
+
 
 
