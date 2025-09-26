@@ -1,6 +1,6 @@
 # Pass by Value vs Pass by Reference in JavaScript
 
-In JavaScript, how data is passed to functions depends on whether it is a **primitive** or **non-primitive** type.
+In JavaScript, how data is passed to functions depends on whether it is a **primitive**-stored in stack or **non-primitive**-stored in heap type.
 
 ---
 ## 🔹 Pass by Value in JavaScript
