@@ -138,3 +138,35 @@ console.log(typeof data); // "boolean"
  - It can also lead to runtime errors if types are not handled carefully.
  - Unlike static languages (like Java or C++), you don’t declare variable types explicitly.
 
+## 🔒 Strict Mode in JavaScript
+
+Strict Mode was introduced in **ECMAScript 5 (ES5)** to enforce stricter parsing and error handling in JavaScript code.  
+It helps developers write **secure, optimized, and less error-prone** code.
+
+---
+
+### 🔹 How to Enable Strict Mode?
+You can enable strict mode by adding `"use strict";` at the **top of a script** or **inside a function**.
+
+```js
+"use strict";  // Whole script is in strict mode
+
+function test() {
+  "use strict";  // Only this function is in strict mode
+}
+```
+## 🔑 Key Features of Strict Mode
+
+- **Eliminates silent errors** → Errors that were ignored are now thrown.  
+- **Disallows undeclared variables** → All variables must be declared with `let`, `const`, or `var`.  
+    ```js
+      "use strict";
+      x = 10; // ❌ Error: x is not defined
+
+    ```
+- **Prevents duplicate parameter names** in functions.  
+- **Changes `this` behavior** → In functions, `this` is `undefined` instead of the global object.  
+- **Reserved keywords restriction** → Keywords like `class`, `enum`, `let`, `implements`, etc. cannot be used as identifiers.  
+- **Prevents assignment to read-only properties or non-writable objects**.  
+- **Safer eval()** → Variables declared inside `eval()` do not leak into the surrounding scope.  
+
