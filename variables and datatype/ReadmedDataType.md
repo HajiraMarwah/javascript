@@ -24,7 +24,7 @@ let name = "Priyanka";  // String
 let isAdmin = true;     // Boolean
 let x;                  // Undefined
 let y = null;           // Null
-
+```
 # ✅ Non-Primitive (Reference) Data Types in JavaScript
 
 ---
