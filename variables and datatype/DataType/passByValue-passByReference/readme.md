@@ -60,3 +60,19 @@ updatePerson(person);
 console.log(person.name); // "Bob"
 console.log(person.age);  // 30
 ```
+## 🔹 Pass by Value vs Pass by Reference – Summary
+
+| Feature                         | Pass by Value                               | Pass by Reference                        |
+|---------------------------------|--------------------------------------------|-----------------------------------------|
+| **Applicable Types**             | Primitive: Number, String, Boolean, null, undefined, Symbol, BigInt | Non-primitive: Object, Array, Function |
+| **Value Passed**                 | Copy of the original value                 | Reference to the original memory        |
+| **Effect Inside Function**       | Changes do **not** affect the original variable | Changes **affect** the original object |
+| **Example**                      | `let x = 10; function f(a){ a=20; }` → `x` remains `10` | `let obj = {name:"Alice"}; function f(o){ o.name="Bob"; }` → `obj.name` becomes `"Bob"` |
+| **Key Point**                    | Safe to pass; original data remains unchanged | Original data can be modified inside function |
+| **Technical Note**               | Everything in JS is technically pass by value; for objects/arrays, the value is the reference itself | Same as left; the reference itself is passed |
+
+### ✅ Quick Notes
+- **Primitive types → Pass by value** (copy of value).  
+- **Non-primitive types → Pass by reference** (reference to memory).  
+- Always remember: modifying objects or arrays inside a function will affect the original data.
+
