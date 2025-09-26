@@ -61,6 +61,40 @@ console.log(y); // 30
 - Use explicit conversion when you want clear and predictable behavior.
 - Type coercion can cause unexpected results, always check your operations.
 
+### 3️⃣ Operations on Logical Operators in JavaScript
+
+Logical operators in **JavaScript**, unlike in many other programming languages,  
+do **not always return `true` or `false`**.  
+Instead, they return **one of the operands**.
+
+---
+
+#### 🔹 OR (`||`) Operator
+- If the **first value** is **truthy**, then the **first value** is returned.  
+- Otherwise, the **second value** is returned.
+
+**Example:**
+```js
+console.log(5 || 10);     // 5  (since 5 is truthy)
+console.log(null || "Hi"); // "Hi" (first is falsy, so returns second)
+```
+#### 🔹AND (`&&`) Operator
+- If **both values** are **truthy**, the **second value** is returned.  
+- If the **first value** is **falsy**, then the **first value** is returned.
+- If the **second value** is **falsy**, then the **second value** is returned.
+
+**Example:**
+```js
+console.log(5 && 10);     // 10 (both truthy, returns second)
+console.log(0 && 10);     // 0  (first is falsy, returns first)
+console.log(5 && null);   // null (second is falsy, returns second)
+
+```
+ # 🔹 Summary
+
+ - || → returns the first truthy value.
+ - && → returns the first falsy value (or last truthy if none falsy).
+
 # Comparison Operators in JavaScript
 
 ## 1️⃣ `==` (Equality / Loose Equality)

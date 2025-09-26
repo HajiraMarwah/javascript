@@ -1,6 +1,6 @@
 # JavaScript Overview
 
-JavaScript is a **high-level, interpreted programming language** widely used for **web development**. It enables developers to create **dynamic and interactive websites**, manipulate HTML/CSS, and communicate with servers.
+JavaScript is a **high-level, interpreted programming language** widely used for **web development**. It enables developers to create **dynamic and interactive websites** makes web page more functional, manipulate HTML/CSS, and communicate with servers.
 
 ---
 

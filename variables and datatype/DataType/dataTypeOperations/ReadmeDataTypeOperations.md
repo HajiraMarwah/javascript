@@ -46,6 +46,7 @@ JavaScript allows different **operations on values**, and the behavior often dep
 
 ---
 
+
 ## 4️⃣ Operations on Null and Undefined
 
 | Operation            | Example             | Result      |
