@@ -165,8 +165,41 @@ function test() {
 
     ```
 - **Prevents duplicate parameter names** in functions.  
-- **Changes `this` behavior** → In functions, `this` is `undefined` instead of the global object.  
+    ```js
+    "use strict";
+    function sum(a, a) { // ❌ Error
+     return a + a;
+    }
+
+    ```
+-  **In functions**, `this` is `undefined` instead of the global object.
+   ```js
+   "use strict";
+    function test() {
+    console.log(this); // undefined, not window
+      }
+    test();
+
+   ```  
 - **Reserved keywords restriction** → Keywords like `class`, `enum`, `let`, `implements`, etc. cannot be used as identifiers.  
+  ```js
+  "use strict";
+   let enum = 5; // ❌ Error
+
+  ```
 - **Prevents assignment to read-only properties or non-writable objects**.  
+   ```js
+   "use strict";
+   const obj = {};
+   Object.defineProperty(obj, "prop", { value: 42, writable: false });
+   obj.prop = 100; // ❌ Error: Cannot assign to read only property
+
+   ```
 - **Safer eval()** → Variables declared inside `eval()` do not leak into the surrounding scope.  
+    ```js
+   "use strict";
+   eval("var x = 10;");
+   console.log(x); // ❌ Error: x is not defined
+
+    ```
 
