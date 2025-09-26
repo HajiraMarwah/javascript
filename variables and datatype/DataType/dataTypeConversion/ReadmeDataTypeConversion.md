@@ -52,7 +52,6 @@ let y = +x;
 console.log(y); // 30
 
 ```
-
 ## 🔹 Key Points
 
 - Implicit conversion happens automatically during operations like `+`, `-`, `*`, etc.
@@ -61,6 +60,38 @@ console.log(y); // 30
 - Any non-empty string or non-zero number → converted to `true`.
 - Use explicit conversion when you want clear and predictable behavior.
 - Type coercion can cause unexpected results, always check your operations.
+
+# Comparison Operators in JavaScript
+
+## 1️⃣ `==` (Equality / Loose Equality)
+
+Checks if two values are equal **after type coercion** (automatic conversion).
+
+### Examples:
+
+```js
+5 == "5";           // true (string converted to number)
+true == 1;          // true
+null == undefined;  // true
+
+```
+## 2️⃣ === (Strict Equality)
+
+Checks if two values are equal without type conversion.
+
+Both value and type must be the same.
+###  Example:
+```js
+5 === "5"; // false (different types)
+true === 1; // false
+null === undefined; // false
+```
+## 🔹 Key Points
+  - == → allows type coercion; can lead to unexpected results.
+  - === → strict equality; safer and recommended.
+  - Similarly, != is loose inequality, and !== is strict inequality.
+
+
 
 
 
