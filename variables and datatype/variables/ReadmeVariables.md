@@ -41,3 +41,33 @@ const PI = 3.14;
   - Case-sensitive (myVar and myvar are different)
   - Cannot use reserved keywords (let, const, if, for, etc.)
 
+# Difference Between `var`, `let`, and `const` in JavaScript
+
+| Feature              | `var`                           | `let`                           | `const`                          |
+|---------------------|--------------------------------|--------------------------------|---------------------------------|
+| **Scope**           | Function-scoped or global       | Block-scoped                   | Block-scoped                     |
+| **Re-declaration**  | Allowed in the same scope       | Not allowed in the same scope  | Not allowed                      |
+| **Re-assignment**   | Allowed                         | Allowed                        | Not allowed (must remain constant) |
+| **Hoisting**        | Yes, initialized with `undefined` | Yes, but not initialized (Temporal Dead Zone) | Yes, but not initialized (Temporal Dead Zone) |
+| **Initialization**  | Optional                        | Optional                       | Mandatory                        |
+| **Use Case**        | Legacy code, avoid in modern JS | Variables that can change      | Constants or values that should not change |
+
+---
+
+### Examples
+
+```js
+// var
+var name = "Priyanka";
+var name = "Hajira"; // re-declaration allowed
+name = "Aisha";      // update allowed
+
+// let
+let age = 25;
+age = 26;            // update allowed
+// let age = 30;     // Error: already declared
+
+// const
+const PI = 3.14;
+// PI = 3.1415;      // Error: assignment to constant variable
+```
