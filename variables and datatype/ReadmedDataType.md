@@ -48,8 +48,45 @@ They are **mutable**, meaning their contents can be changed.
 
 ### Object
 ```js
-let person = { name: "Priyanka", age: 25 }; 
+// Creating an object
+let person = {
+  name: "Priyanka",
+  age: 25,
+  isAdmin: true
+};
+
+// Accessing properties
 console.log(person.name); // "Priyanka"
+console.log(person.age);  // 25
+
+// Modifying properties
+person.age = 26;
+console.log(person.age);  // 26
+
+// Adding new properties
+person.email = "priyanka@example.com";
+console.log(person.email); // "priyanka@example.com"
+
+// Deleting a property
+delete person.isAdmin;
+console.log(person.isAdmin); // undefined
+
+// Nested object
+let student = {
+  name: "Hajira",
+  grades: {
+    math: 90,
+    science: 95
+  }
+};
+console.log(student.grades.math); // 90
+
+// Object as a function parameter
+function greet(obj) {
+  console.log(`Hello ${obj.name}!`);
+}
+greet(person); // "Hello Priyanka!"
+
 ```
  
 ### Array
@@ -108,3 +145,15 @@ console.log(multiply(4, 6)); // 24
 | **Examples**       | Number, String, Boolean, Null, Undefined, Symbol, BigInt | Object, Array, Function             |
 | **Copy Behavior**  | Creates a **new independent copy**               | Copies only the **reference (address)**    |
 | **Memory**         | Stored in **stack**                              | Stored in **heap**                         |
+
+# JavaScript: null vs undefined
+
+| Feature           | `null`                                                       | `undefined`                                                                     |
+| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| **Type**          | `object`                                                     | `undefined`                                                                     |
+| **Meaning**       | Represents **intentional absence** of a value                | Represents **absence of value by default** (not initialized)                    |
+| **Assigned by**   | Usually assigned by the programmer                           | Usually assigned by JavaScript engine                                           |
+| **Default value** | No default; must be explicitly assigned                      | Default value for **uninitialized variables** or **missing function arguments** |
+| **Example**       | `let a = null;`                                              | `let b;`                                                                        |
+| **Comparison**    | `null == undefined` → true <br> `null === undefined` → false | `undefined == null` → true <br> `undefined === null` → false                    |
+| **Use case**      | To explicitly indicate “no value”                            | To check if a variable or property **exists or not initialized**                |
