@@ -147,3 +147,137 @@ const functionName = (parameters) => {
  ## Explanation
   - If the function has only one parameter, parentheses can be omitted.
   - If the function has only one statement, the braces {} and return can be omitted.
+  ## 🔹 Examples
+ ### 1️⃣ Basic Arrow Function
+ ```js
+ const greet = () => {
+  return "Hello, World!";
+};
+console.log(greet()); // Output: Hello, World!
+
+ ```
+ ## 2️⃣ Single Line Return (Implicit Return)
+ ```js
+ const add = (a, b) => a + b;
+
+console.log(add(5, 3)); // Output: 8
+
+ ```
+  
+## 3️⃣ With One Parameter (No Parentheses Needed)
+```js
+const square = x => x * x;
+
+console.log(square(4)); // Output: 16
+
+```
+## 4️⃣ Arrow Function with Multiple Parameters
+```js
+const multiply = (a, b, c) => a * b * c;
+
+console.log(multiply(2, 3, 4)); // Output: 24
+```
+## 5️⃣ Arrow Function Inside Array Methods
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+```
+## 6️⃣ Arrow Functions and this
+```js
+function Person() {
+  this.age = 25;
+
+  setTimeout(() => {
+    console.log(this.age); // ✅ Works because arrow inherits "this" from Person
+  }, 1000);
+}
+
+new Person();
+```
+## Key Feature of Arrow 
+  - ✅ Shorter syntax
+  - ✅ Implicit return for single expressions
+  - ✅ Inherit this from enclosing scope (lexical this)
+  - ❌ Cannot be used as constructors (new)
+  - ❌ Do not have arguments object
+
+### 4️⃣ IIFE (Immediately Invoked Function Expression) in JavaScript  
+
+An **IIFE** is a function in JavaScript that is **defined and executed immediately** after it is created.  
+It helps in creating a **private scope** and avoids polluting the global namespace.  
+
+---
+
+## 🔹 Syntax  
+
+```js
+(function () {
+  // code here runs immediately
+})();
+```
+
+ ## 🔹 Examples
+## 1️⃣ Basic IIFE
+```js
+(function () {
+  console.log("IIFE executed!");
+})();
+// Output: IIFE executed!
+
+```
+
+## 2️⃣ IIFE with Parameters
+```js
+(function (name) {
+  console.log("Hello, " + name + "!");
+})("Priyanka");
+
+// Output: Hello, Priyanka!
+
+```
+## 3️⃣ IIFE Returning a Value
+```js
+const result = (function () {
+  return 2 + 3;
+})();
+
+console.log(result); // Output: 5
+
+```
+## 4️⃣ IIFE with Arrow Function
+```js
+(() => {
+  console.log("Arrow function IIFE executed!");
+})();
+// Output: Arrow function IIFE executed!
+```
+## 5️⃣ IIFE for Data Privacy
+```js
+const counter = (function () {
+  let count = 0; // private variable
+
+  return {
+    increment: function () {
+      count++;
+      return count;
+    },
+    decrement: function () {
+      count--;
+      return count;
+    }
+  };
+})();
+
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.decrement()); // 1
+
+```
+## 🔹 Why Use IIFE?
+ - ✅ Avoids polluting the global namespace
+ - ✅ Provides data privacy (encapsulation)
+ - ✅ Useful in modular programming
+ - ✅ Runs code immediately
