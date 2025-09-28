@@ -143,6 +143,7 @@ They provide a **shorter syntax** to write functions and also handle the `this` 
 const functionName = (parameters) => {
   // function body
 };
+```
  ## Explanation
   - If the function has only one parameter, parentheses can be omitted.
   - If the function has only one statement, the braces {} and return can be omitted.
