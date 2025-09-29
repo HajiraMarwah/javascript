@@ -39,3 +39,21 @@ function showGlobal() {
 }
 showGlobal();
 console.log(globalVar);   // Accessible
+```
+### 2️⃣ Function Scope
+```js
+function localScopeExample() {
+  var localVar = "I am local";
+  console.log(localVar); // Accessible
+}
+localScopeExample();
+console.log(localVar);    // ❌ Error: localVar is not defined
+```
+ ### 3️⃣Block scope with let/const
+```js
+{
+  let blockVar = "I am block scoped";
+  console.log(blockVar); // Accessible here
+}
+console.log(blockVar);    // ❌ Error: blockVar is not defined
+```
