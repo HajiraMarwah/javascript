@@ -57,3 +57,16 @@ console.log(localVar);    // ❌ Error: localVar is not defined
 }
 console.log(blockVar);    // ❌ Error: blockVar is not defined
 ```
+### 4️⃣ Lexical Scope
+```js
+function outer() {
+  let outerVar = "Outer variable";
+
+  function inner() {
+    console.log(outerVar); // Can access outer variable
+  }
+
+  inner();
+}
+outer();
+```
