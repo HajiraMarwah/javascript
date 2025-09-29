@@ -94,3 +94,10 @@ outer();
 - Its own variables (innerVar)
 - The outer function’s variables (outerVar)
 - Global variables (globalVar)
+
+## 🔹 Summary
+- Global Scope: Accessible everywhere.
+- Function Scope: Accessible only inside a function.
+- Block Scope: Accessible only inside {} when using let/const.
+- Lexical Scope: Inner functions can access outer variables.
+- Scope Chain: JavaScript looks for variables in the current scope → parent scope → global scope.
