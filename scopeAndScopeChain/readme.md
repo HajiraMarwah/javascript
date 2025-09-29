@@ -70,3 +70,27 @@ function outer() {
 }
 outer();
 ```
+## Example of Scope Chain
+```js
+var globalVar = "Global";
+
+function outer() {
+  var outerVar = "Outer";
+
+  function inner() {
+    var innerVar = "Inner";
+    console.log(innerVar);   // Found in inner scope
+    console.log(outerVar);   // Found in outer scope
+    console.log(globalVar);  // Found in global scope
+  }
+
+  inner();
+}
+
+outer();
+
+```
+##  Here, inner() has access to:
+- Its own variables (innerVar)
+- The outer function’s variables (outerVar)
+- Global variables (globalVar)
