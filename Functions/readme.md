@@ -148,6 +148,7 @@ const functionName = (parameters) => {
   - If the function has only one parameter, parentheses can be omitted.
   - If the function has only one statement, the braces {} and return can be omitted.
   ## 🔹 Examples
+  
  ### 1️⃣ Basic Arrow Function
  ```js
  const greet = () => {
@@ -203,6 +204,7 @@ new Person();
   - ✅ Inherit this from enclosing scope (lexical this)
   - ❌ Cannot be used as constructors (new)
   - ❌ Do not have arguments object
+
 
 ### 4️⃣ IIFE (Immediately Invoked Function Expression) in JavaScript  
 
