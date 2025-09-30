@@ -5,7 +5,7 @@ It is a fundamental part of **control flow** in JavaScript.
 
 ---
 
-## 🔹 Syntax
+**Syntax:**
 
 ```js
 if (condition) {
@@ -59,12 +59,12 @@ if (score >= 90) {
 ```
 ## 🔹 4. Ternary Operator (? :)
  The ternary operator is a compact way of writing an if-else.
-   # Syntax
+   **Syntax:**
    ```js
    condition ? expressionIfTrue : expressionIfFalse
 
    ```
-   # Example
+   **Example:**
     ```js
     let age = 18;
     let message = (age >= 18) ? "Adult" : "Minor";
