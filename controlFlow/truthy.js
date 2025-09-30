@@ -15,4 +15,8 @@ let val1=1
 // val1=null ?? 10 ?? 20  //10 gets first truthy value
 console.log(val1) 
 
+let str = "Hello World";
+for (let char of str) {
+  console.log(`Each char is ${char}`); //
+}
 

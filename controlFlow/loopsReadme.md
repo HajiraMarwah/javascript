@@ -60,7 +60,8 @@ do {
 } while (i < 3);
 // Output: 0 1 2
 ```
-### 🔹 4. for...of Loop (ES6+)
+### 🔹 4. Array Loops
+  ## 1. for...of Loop (ES6+)
 Used to loop over values of an iterable (like arrays, strings, maps, sets).
 **Example:**
 ```js
@@ -70,13 +71,62 @@ for (let value of arr) {
 }
 // Output: 10 20 30
 
-let str = "JS";
+let str = "Hello World";
 for (let char of str) {
-  console.log(char);
+  console.log(`Each char is ${cha}`);
 }
-// Output: J S
+//  Output: Each char is H
+// Each char is e
+// Each char is l
+// Each char is l
+// Each char is o
+// Each char is
+// Each char is W
+// Each char is o
+// Each char is r
+// Each char is l
+// Each char is d
+
 ```
-### 🔹 5. for...in Loop
+## 2. Map Object (ES6)
+  A Map is a built-in object that stores key-value pairs.
+Unlike objects:
+Keys can be any type (numbers, strings, objects, functions).
+Maintains the insertion order.
+**Syntax:**
+let map = new Map();
+**Example**
+```js
+let map = new Map();
+
+map.set("name", "Alice");
+map.set("age", 25);
+map.set(1, "number key");
+map.set("name","Alice")  // wont add it in Map object as Map know for its unique value and in order only it comes
+console.log(map)// Map(3) { 'name' => 'Alice', 'age' => 25, 1 => 'number key' }
+console.log(map.get("name")); // Alice
+console.log(map.get(1));      // number key
+console.log(map.size);        // 3
+```
+**Example 2: Iterating over Map:**
+```js
+let map = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3]
+]);
+
+for (let [key, value] of map) {
+  console.log(key, value);
+}
+// a 1
+// b 2
+// c 3
+
+```
+
+
+## 🔹 4 for...in Loop
 Used to loop over the keys/properties of an object.
 **Example:**
 ```js
