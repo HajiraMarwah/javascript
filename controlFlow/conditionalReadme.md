@@ -67,9 +67,9 @@ if (score >= 90) {
    # Example
     ```js
     let age = 18;
-   let message = (age >= 18) ? "Adult" : "Minor";
-   console.log(message);
-   ```
+    let message = (age >= 18) ? "Adult" : "Minor";
+    console.log(message);
+    ```
 ## ✅ Key Points
  - if executes code only when the condition is true.
  - else executes code when the if condition is false.
