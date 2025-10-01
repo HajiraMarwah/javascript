@@ -86,9 +86,56 @@ for (let char of str) {
 // Each char is r
 // Each char is l
 // Each char is d
+```
+## 2.for Each
+The forEach()  method is callback function executes a provided function once for each element in an array.
+It is mainly used for iteration (looping) but does not return a new array (unlike map).
+**Syntax:**
+```js
+   array.forEach(function(element, index, array) {
+  // code to execute
+});
+element → current element of the array
+index → index of the current element (optional)
+array → the whole array being looped (optional)
+```
+  **Example 1-basic**
+  ```js
+  let numbers = [10, 20, 30];
+
+numbers.forEach(num => {
+  console.log(num);
+});
+// 10
+// 20
+// 30
+```
+**Example 2: Access Index**
+```js
+let fruits = ["apple", "banana", "cherry"];
+
+fruits.forEach((fruit, index) => {
+  console.log(index, fruit);
+});
+// 0 apple
+// 1 banana
+// 2 cherry
 
 ```
-## 2. Map Object (ES6)
+**Example 3: Using the Whole Array**
+```js
+let colors = ["red", "green", "blue"];
+
+colors.forEach((color, index, arr) => {
+  console.log(`${color} is at index ${index} in`, arr);
+});
+// red is at index 0 in [ 'red', 'green', 'blue' ]
+// green is at index 1 in [ 'red', 'green', 'blue' ]
+// blue is at index 2 in [ 'red', 'green', 'blue' ]
+
+
+```
+## 3. Map Object (ES6)
   A Map is a built-in object that stores key-value pairs.
 Unlike objects:
 Keys can be any type (numbers, strings, objects, functions).
@@ -108,6 +155,7 @@ console.log(map.get("name")); // Alice
 console.log(map.get(1));      // number key
 console.log(map.size);        // 3
 ```
+
 **Example 2: Iterating over Map:**
 ```js
 let map = new Map([
@@ -126,7 +174,8 @@ for (let [key, value] of map) {
 ```
 
 
-## 🔹 4 for...in Loop
+### 🔹 5. Object Loops
+## 1. for...in Loop
 Used to loop over the keys/properties of an object.
 **Example:**
 ```js
@@ -139,6 +188,41 @@ for (let key in obj) {
 // b 2
 // c 3
 ```
+**Example1:**
+```js
+const myObject={
+    js:"javascript",
+    cpp:"c++",
+    rb:"ruby",
+    swift:"swift by app"
+}
+for(const key in myObject){
+    console.log(`${key} is shortcut for ${myObject[key]}`)
+}
+//output:
+// js is shortcut for javascript
+// cpp is shortcut for c++
+// rb is shortcut for ruby
+// swift is shortcut for swift by app
+
+```
+## 2. Object.keys() + forEach
+   Gets an array of keys and loops through them.
+   ```js
+   let car = {
+     brand: "Tesla",
+     model: "Model 3",
+    year: 2024
+    };
+
+   Object.keys(car).forEach(key => {
+    console.log(key, ":", car[key]);
+   });
+   // brand : Tesla
+   // model : Model 3
+   // year : 2024
+
+   ```
 ### 🔹 6. Nested Loops
  Loops inside another loop.Useful for working with multi-dimensional arrays.
  **Example:**
@@ -156,10 +240,27 @@ for (let key in obj) {
  // i=3, j=1
  // i=3, j=2
 ```
+ ## 3. Object.values() + forEach
+ Gets an array of values only.
+ ```js
+ let scores = { math: 90, science: 85, english: 88 };
+
+Object.values(scores).forEach(value => {
+  console.log("Score:", value);
+});
+// Score: 90
+// Score: 85
+// Score: 88
+
+ ```
+ **✅ Best Practices**
+ - Use for...in only if you need to iterate over object keys, but check hasOwnProperty.
+ - Use Object.keys() / Object.values() / Object.entries() when you want clean and modern looping.
+ - For both key and value → Object.entries() is the best.
+
+
 ### 🔹 7. break and continue
-
 break → exits the loop immediately.
-
 continue → skips the current iteration and continues with the next.
 **Example:**
 ```js

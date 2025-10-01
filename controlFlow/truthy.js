@@ -20,3 +20,12 @@ for (let char of str) {
   console.log(`Each char is ${char}`); //
 }
 
+const myObject={
+    js:"javascript",
+    cpp:"c++",
+    rb:"ruby",
+    swift:"swift by app"
+}
+for(const key in myObject){
+    console.log(`${key} is shortcut for ${myObject[key]}`)
+}
