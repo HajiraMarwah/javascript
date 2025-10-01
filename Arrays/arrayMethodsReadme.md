@@ -89,25 +89,134 @@ console.log(nums); // [1, 2, 99, 100, 5]
 
 ```
 ### 1️⃣2️⃣ `map()`-Creates a new array by applying a function to each element.
+ **Syntax**  
+   ```js
+   array.map(function(element, index, array) {
+   // return transformed value
+     });
+  ```
+ **Example:**   
 ```js
 let numbers = [1, 2, 3];
 let doubled = numbers.map(num => num * 2);
 console.log(doubled); // [2, 4, 6]
 
 ```
-### 1️⃣3️⃣ `filter()`- Creates a new array with elements that pass a condition.
+  **Example1**
+  ```js
+     let users = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 35 }
+];
+
+let names = users.map(user => user.name);
+
+console.log(names);
+// ["Alice", "Bob", "Charlie"]
+
+  ```
+  ***✅ When to Use map()***
+  - When you want to transform each element of an array.
+  - To create a new array of the same length.
+  - Example use cases: formatting data, extracting properties, converting values.
+
+### 1️⃣3️⃣ `filter()`- Creates a new array with elements that pass a condition provide by callback function.
+**Syntax**
+```js
+array.filter(function(element, index, array) {
+  // return true to keep the element
+  // return false to exclude the element
+});
+element → current element being processed
+index → index of the current element (optional)
+array → the original array (optional)
+```
+***Example***
 ```js
 let numbers = [1, 2, 3, 4, 5];
 let even = numbers.filter(num => num % 2 === 0);
 console.log(even); // [2, 4]
 
 ```
-### 1️⃣4️⃣ `reduce()`-Reduces array to a single value.
+***Example 1: Filter Numbers Greater Than 10***
+```js
+let numbers = [5, 12, 8, 130, 44];
+
+let result = numbers.filter(num => num > 10);
+
+console.log(result); 
+// [12, 130, 44]
+```
+***Example 2: Filter Objects in an Array***
+```js
+let users = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 17 },
+  { name: "Charlie", age: 30 }
+];
+
+let adults = users.filter(user => user.age >= 18);
+
+console.log(adults);
+// [ { name: 'Alice', age: 25 }, { name: 'Charlie', age: 30 } ]
+```
+ **✅ When to Use filter()**
+  - Extract elements that match a condition.
+  - Remove unwanted values.
+  - Create a smaller array based on a rule.
+### 1️⃣4️⃣ `reduce()`-Reduce method executes a reducer function on each element of an array, resulting in a **single output value**.  
+
+It is often used for **summing, counting, or combining values**. 
+**Syntax**
+```js
+array.reduce(function(accumulator, currentValue, index, array) {
+  // return updated accumulator
+}, initialValue);
+accumulator → accumulates the result of each iteration.
+currentValue → the current element being processed.
+index → index of the current element (optional).
+array → the original array (optional).
+initialValue → starting value of the accumulator (optional but recommended).
+```
+**Example1:Sum of Numbers**
 ```js
 let numbers = [1, 2, 3, 4];
 let sum = numbers.reduce((acc, curr) => acc + curr, 0);
 console.log(sum); // 10
 ```
+**Example2:Product of Numbers**
+```js
+let nums = [2, 3, 4];
+let product = nums.reduce((acc, curr) => acc * curr, 1);
+console.log(product); 
+// 24
+```
+**Example 3:Flatten an Array**
+```js
+let nested = [[1, 2], [3, 4], [5, 6]];
+
+let flat = nested.reduce((acc, curr) => acc.concat(curr), []);
+
+console.log(flat); 
+// [1, 2, 3, 4, 5, 6]
+
+```
+**Example 4: Count Occurrences**
+```js
+let fruits = ["apple", "banana", "apple", "cherry", "banana"];
+let count = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+console.log(count); 
+// { apple: 2, banana: 2, cherry: 1 }
+```
+***✅ When to Use reduce()***
+  - To calculate a single value from an array (sum, product, max, min).
+  - To transform an array into an object or another array.
+  - When you want accumulation logic over an array.
+
 ### 1️⃣5️⃣ `forEach()`- Executes a function for each array element.
 ```js
 let fruits = ["Apple", "Banana", "Mango"];
