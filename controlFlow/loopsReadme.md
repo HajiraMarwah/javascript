@@ -61,7 +61,7 @@ do {
 // Output: 0 1 2
 ```
 ## 🔹 4. Array Loops
-  # 1. for...of Loop (ES6+)
+   **1. for...of Loop (ES6+)**
 Used to loop over values of an iterable (like arrays, strings, maps, sets).
 **Syntax:**
 ```js
@@ -93,7 +93,7 @@ for (let char of str) {
 // Each char is l
 // Each char is d
 ```
-## 2.for Each
+**2.for Each**
 The forEach()  method is callback function executes a provided function once for each element in an array.
 It is mainly used for iteration (looping) but does not return a new array (unlike map).
 **Syntax:**
@@ -141,7 +141,7 @@ colors.forEach((color, index, arr) => {
 
 
 ```
-## 3. Map Object (ES6)
+**3. Map Object (ES6)**
   A Map is a built-in object that stores key-value pairs.
 Unlike objects:
 Keys can be any type (numbers, strings, objects, functions).
@@ -180,7 +180,7 @@ for (let [key, value] of map) {
 ```
 
 ### 🔹 5. Object Loops
-## 1. for...in Loop
+**1. for...in Loop**
 Used to loop over the keys/properties of an object.
 **Syntax**
 ```js
@@ -217,7 +217,7 @@ for(const key in myObject){
 // swift is shortcut for swift by app
 
 ```
-## 2. Object.keys() + forEach
+**2. Object.keys() + forEach**
    Gets an array of keys and loops through them.
    ```js
    let car = {
@@ -234,6 +234,23 @@ for(const key in myObject){
    // year : 2024
 
    ```
+   **3. Object.values() + forEach**
+ Gets an array of values only.
+ ```js
+ let scores = { math: 90, science: 85, english: 88 };
+
+Object.values(scores).forEach(value => {
+  console.log("Score:", value);
+});
+// Score: 90
+// Score: 85
+// Score: 88
+
+ ```
+ **✅ Best Practices**
+ - Use for...in only if you need to iterate over object keys, but check hasOwnProperty.
+ - Use Object.keys() / Object.values() / Object.entries() when you want clean and modern looping.
+ - For both key and value → Object.entries() is the best.
 ### 🔹 6. Nested Loops
  Loops inside another loop.Useful for working with multi-dimensional arrays.
  **Example:**
@@ -251,23 +268,7 @@ for(const key in myObject){
  // i=3, j=1
  // i=3, j=2
 ```
- ## 3. Object.values() + forEach
- Gets an array of values only.
- ```js
- let scores = { math: 90, science: 85, english: 88 };
-
-Object.values(scores).forEach(value => {
-  console.log("Score:", value);
-});
-// Score: 90
-// Score: 85
-// Score: 88
-
- ```
- **✅ Best Practices**
- - Use for...in only if you need to iterate over object keys, but check hasOwnProperty.
- - Use Object.keys() / Object.values() / Object.entries() when you want clean and modern looping.
- - For both key and value → Object.entries() is the best.
+ 
 
  ## 🔹 Comparison Table  
 
