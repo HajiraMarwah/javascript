@@ -60,8 +60,8 @@ do {
 } while (i < 3);
 // Output: 0 1 2
 ```
-### 🔹 4. Array Loops
-  ## 1. for...of Loop (ES6+)
+## 🔹 4. Array Loops
+  # 1. for...of Loop (ES6+)
 Used to loop over values of an iterable (like arrays, strings, maps, sets).
 **Syntax:**
 ```js
