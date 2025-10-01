@@ -63,6 +63,12 @@ do {
 ### 🔹 4. Array Loops
   ## 1. for...of Loop (ES6+)
 Used to loop over values of an iterable (like arrays, strings, maps, sets).
+**Syntax:**
+```js
+for (let value of iterable) {
+  // code block to execute
+}
+```
 **Example:**
 ```js
 let arr = [10, 20, 30];
@@ -173,10 +179,15 @@ for (let [key, value] of map) {
 
 ```
 
-
 ### 🔹 5. Object Loops
 ## 1. for...in Loop
 Used to loop over the keys/properties of an object.
+**Syntax**
+```js
+for (let key in object) {
+  // code block to execute
+}
+```
 **Example:**
 ```js
 let obj = { a: 1, b: 2, c: 3 };
@@ -258,7 +269,16 @@ Object.values(scores).forEach(value => {
  - Use Object.keys() / Object.values() / Object.entries() when you want clean and modern looping.
  - For both key and value → Object.entries() is the best.
 
+ ## 🔹 Comparison Table  
 
+| Feature       | `for...in`                        | `for...of`                        |
+| ------------- | --------------------------------- | --------------------------------- |
+| Iterates over | Keys (property names)             | Values (of iterables)             |
+| Works on      | Objects, Arrays (not recommended) | Arrays, Strings, Maps, Sets, etc. |
+| Return type   | Keys as **strings**               | Actual values                     |
+| Best for      | **Objects**                       | **Arrays & Iterables**            |
+
+---
 ### 🔹 7. break and continue
 break → exits the loop immediately.
 continue → skips the current iteration and continues with the next.
