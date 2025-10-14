@@ -53,6 +53,10 @@ Returns a live HTMLCollection of all <p> elements.
 document.querySelector("#title");       // Selects first element matching selector
 document.querySelectorAll(".text");     // Selects all elements matching selector
 ```
+## DOM Selectors: NodeList vs HTMLCollection Example
+ `querySelectorAll()` returns a **static NodeList**,  
+while `getElementsByClassName()` and `getElementsByTagName()` return a **live HTMLCollection**.
+
 ## HTMLCollection vs NodeList
 | Feature     | HTMLCollection                                       | NodeList                                 |
 | ----------- | ---------------------------------------------------- | ---------------------------------------- |
