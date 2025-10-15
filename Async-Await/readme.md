@@ -1,10 +1,10 @@
-# 📘 Understanding `async` in JavaScript
+#  Understanding `async` in JavaScript
 
 In JavaScript, `async` is a keyword that allows you to write asynchronous (non-blocking) code using a cleaner, more readable syntax. It works hand-in-hand with `await`.
 
 ---
 
-## 🧠 Why Asynchronous?
+##  Why Asynchronous?
 
 JavaScript runs in a **single thread**, so long-running tasks (like fetching data from a server) can **block** the rest of your code from running.
 

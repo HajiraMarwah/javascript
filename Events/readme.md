@@ -1,4 +1,6 @@
-### What are Events in JavaScript?
+
+# Events in Javascript
+## What are Events in JavaScript?
 
   - In JavaScript, events are actions or occurrences that happen in the browser — like a user clicking a button, pressing a key, moving the mouse, or a page loading.
   - JavaScript can listen for these events and respond by running code. This is how interactivity is built into websites.
