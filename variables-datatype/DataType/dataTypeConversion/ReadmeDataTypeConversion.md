@@ -14,11 +14,11 @@ JavaScript automatically converts one type to another when needed.
 ```js
 // Number → String
 let result1 = 5 + "5"; 
-console.log(result1); // "55" (number converted to string)
+console.log("result1",result1); // "55" (number converted to string)
 
 // String → Number
 let result2 = "5" * 2;
-console.log(result2); // 10 (string converted to number)
+console.log("result2",result2); // 10 (string converted to number)
 
 // Boolean → Number
 let result3 = true + 1;
@@ -49,7 +49,7 @@ console.log(boolVal); // false
 // Using unary + for conversion to number
 let x = "30";
 let y = +x;
-console.log(y); // 30
+console.log("y value ",y); // 30
 
 ```
 ## 🔹 Key Points

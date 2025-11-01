@@ -1,6 +1,7 @@
 # JavaScript Data Types
 
 ---
+## DataType-A data type defines the kind of value a variable can hold and how that value can be used.
 
 ## ✅ Primitive Data Types
 

@@ -50,7 +50,7 @@ JavaScript is a **high-level, interpreted programming language** widely used for
 ### 1️⃣ Syntax Errors
 - Occur due to **incorrect code structure**.  
 ```js
-let name = "Priyanka
+let name = "Priyanka"
 // SyntaxError: Unterminated string literal
 ```
 ### 2️⃣ Reference Errors

@@ -76,3 +76,9 @@ function greet() {} // hoisted with definition
 - let & const → hoisted, but cannot access before declaration.
 - Function declarations → fully hoisted.
 - Function expressions & arrow functions → not fully hoisted.
+
+## Advantage
+ - Easier function usage before declaration; organized code
+ ## Disadvanatge
+ - Can cause confusion, undefined variables, inconsistent var/let behavior
+ 
