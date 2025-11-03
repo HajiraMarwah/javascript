@@ -23,7 +23,7 @@ console.log(fruits[2]); // Mango
    numbers.push(4);
    console.log(numbers); // [1, 2, 3, 4]
 ```
-  ### 2️⃣ `pop()`- Adds one or more elements to the end of an array.
+  ### 2️⃣ `pop()`- remove one or more elements to the end of an array.
   ```js
   let numbers = [1, 2, 3];
   numbers.pop();
@@ -280,6 +280,7 @@ console.log(nums.flatMap(x => [x, x * 2])); // [1, 2, 2, 4, 3, 6]
 let nums = [1, 2, 3, 4];
 nums.fill(0, 1, 3);
 console.log(nums); // [1, 0, 0, 4]
+
 
 let arr1 = [5, 6, 7, 8];
 arr1.fill(9);  

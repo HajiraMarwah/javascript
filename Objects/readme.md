@@ -62,6 +62,7 @@ console.log(config.api);
 Object.seal(person);
 person.age = 26; // ✅ Allowed
 person.city = "Delhi"; // ❌ Not allowed
+delete person.age  //not allowed
 console.log(person); 
 // { name: "Priya", age: 26 }
 
@@ -113,4 +114,36 @@ console.log(Object.is(25, 25));       // true
 console.log(Object.is(NaN, NaN));     // true (unlike ===)
 console.log(Object.is(0, -0));        // false
 
+```
+
+### Creating Objects in JavaScript
+1. Object literal which is commom
+```js
+const user={name:"hajira",age:28}
+```
+2. using new object
+```js
+const user=new Object()
+user.name="hajira"
+user.age=28
+```
+
+3. using consructor
+```js
+function User(name,age){
+  this.name=name
+  this.age=age
+}
+const u1=new User("hajira",28)
+```
+
+4. using class
+```js
+class User{
+    constructor(name,age){
+        this.name=name
+        this.age=age
+    }
+}
+const user1=new User("hajira",28)
 ```
