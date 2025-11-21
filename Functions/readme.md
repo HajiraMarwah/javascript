@@ -26,6 +26,7 @@ Named functions are useful for:
 
 ---
 
+
 ## 🔹 Syntax
 ```js
 function functionName(parameters) {

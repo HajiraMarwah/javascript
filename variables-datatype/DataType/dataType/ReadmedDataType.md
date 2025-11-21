@@ -41,7 +41,8 @@ They are **mutable**, meaning their contents can be changed.
 
 1. **Object** → Stores key-value pairs.  
 2. **Array** → Stores an ordered collection of values.  
-3. **Function** → Callable objects that can execute code.  
+3. **Function** → Callable objects that 
+can execute code.  
 
 ---
 
