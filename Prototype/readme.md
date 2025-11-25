@@ -5,6 +5,7 @@ Every JavaScript object has an internal link to another object called its protot
 __proto__ is the reference to the prototype object.
 The prototype object contains properties and methods that can be shared among all objects created from that prototype.
 
+
 This is how inheritance is implemented in JavaScript.
 
 ✅ In simple words:
@@ -21,21 +22,14 @@ const newP1=new Person("hajira")
 newP1.sayHello()
 ```
 ## 2️⃣ Prototype Chain
-
-When you access a property on an object, JS:
-
-Looks for the property on the object itself.
-
-If not found, looks in the object’s prototype.
-
-Repeats this until it reaches Object.prototype.
-
-If not found anywhere, returns undefined.
+ - When you access a property on an object, JS:
+ - Looks for the property on the object itself.
+ - If not found, looks in the object’s prototype.
+ - Repeats this until it reaches Object.prototype.
+ - If not found anywhere, returns undefined.
 
 ## 3️⃣ Inheritance in JavaScript
-
 JavaScript uses prototypal inheritance.
-
 Objects inherit directly from other objects, unlike classical inheritance in other languages.
 ```js
 const animal = {
@@ -82,4 +76,9 @@ const myCar = new Car("Tesla");
 myCar.start(); // Car started (inherited)
 myCar.drive(); // Tesla is driving
 ```
-**Inheritance Using ES6 Classes**
+## Short, Perfect Answer (say this in interviews)
+
+prototype is a property of functions.
+__proto__ is a property of objects.
+
+prototype is used to set what will become the __proto__ of objects created by a constructor function.
