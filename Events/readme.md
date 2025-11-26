@@ -34,6 +34,7 @@ Whenever an event occurs, JavaScript gives your event listener a special event o
 | **`clientX`**, **`clientY`** | Mouse position relative to the **viewport** (browser window, no scroll). |
 | **`screenX`**, **`screenY`** | Mouse position relative to the **physical screen**.                      |
 
+
 **Keyboard Properties**
 | Property       | Description                                                                      |
 | -------------- | -------------------------------------------------------------------------------- |
