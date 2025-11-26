@@ -26,12 +26,20 @@ function factorial(n) {
 
 console.log(factorial(5)); // Output: 120
 ```
+**Fibonacci**
+```js
+function fibonacci(n){
+    if(n<=1)return n
+    return fibonacci(n-1)+fibonacci(n-2)
+}
+console.log(fibonacci(6))
+```
 **Advantages of Recursion**
  1. Makes code cleaner and readable
  2. reduces complecx loops
 
 **Disadvantages**
-1. can be slowe(more memory used for call stack)
+1. can be slow(more memory used for call stack)
 2. Risk of stack overflow if base case is missing or incorrect
 
 **Common Uses of Recursion**

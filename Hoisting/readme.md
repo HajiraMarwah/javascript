@@ -71,6 +71,7 @@ const city;         // hoisted but in TDZ
 function greet() {} // hoisted with definition
 ```
 ## 🔹 Key Points
+
 - Declarations are hoisted, initializations are not.
 - var variables → hoisted with undefined.
 - let & const → hoisted, but cannot access before declaration.

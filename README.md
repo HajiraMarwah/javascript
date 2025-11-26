@@ -4,6 +4,8 @@ JavaScript is a **high-level, interpreted programming language** widely used for
 
 ---
 
+
+
 ## 🔹 Advantages of JavaScript
 
 1. **Client-Side Execution**  

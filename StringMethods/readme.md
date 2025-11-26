@@ -115,3 +115,4 @@ console.log(arr);     // [1, 2, 6, 7, 5]
 console.log(removed); // [3, 4] (removed elements)
 
 
+
